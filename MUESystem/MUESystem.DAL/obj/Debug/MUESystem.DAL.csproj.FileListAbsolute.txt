@@ -1,0 +1,17 @@
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.csprojResolveAssemblyReference.cache
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\bin\Debug\MUESystem.DAL.dll.config
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\bin\Debug\MUESystem.DAL.dll
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\bin\Debug\MUESystem.DAL.pdb
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\bin\Debug\EntityFramework.dll
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\bin\Debug\EntityFramework.SqlServer.dll
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\bin\Debug\MUESystem.IDAL.dll
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\bin\Debug\MUESystem.Model.dll
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\bin\Debug\MUESystem.IDAL.pdb
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\bin\Debug\MUESystem.Model.pdb
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\bin\Debug\EntityFramework.xml
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\bin\Debug\EntityFramework.SqlServer.xml
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.dll
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.pdb
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.InitialCreate.resources
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.csproj.GenerateResource.Cache
+D:\我的文档\Visual Studio 2013\Projects\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.updateUsers.resources

@@ -1,0 +1,4 @@
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.Common\bin\Debug\MUESystem.Common.dll
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.Common\bin\Debug\MUESystem.Common.pdb
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.Common\obj\Debug\MUESystem.Common.dll
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.Common\obj\Debug\MUESystem.Common.pdb

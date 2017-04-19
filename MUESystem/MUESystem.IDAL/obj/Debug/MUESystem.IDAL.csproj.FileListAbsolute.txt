@@ -1,0 +1,7 @@
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.IDAL\obj\Debug\MUESystem.IDAL.csprojResolveAssemblyReference.cache
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.IDAL\bin\Debug\MUESystem.IDAL.dll
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.IDAL\bin\Debug\MUESystem.IDAL.pdb
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.IDAL\bin\Debug\MUESystem.Model.dll
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.IDAL\bin\Debug\MUESystem.Model.pdb
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.IDAL\obj\Debug\MUESystem.IDAL.dll
+d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.IDAL\obj\Debug\MUESystem.IDAL.pdb
