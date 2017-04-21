@@ -5,3 +5,10 @@ d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.IDAL\bin\Debug\M
 d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.IDAL\bin\Debug\MUESystem.Model.pdb
 d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.IDAL\obj\Debug\MUESystem.IDAL.dll
 d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.IDAL\obj\Debug\MUESystem.IDAL.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IDAL\bin\Debug\MUESystem.IDAL.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IDAL\bin\Debug\MUESystem.IDAL.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IDAL\bin\Debug\MUESystem.Model.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IDAL\bin\Debug\MUESystem.Model.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IDAL\obj\Debug\MUESystem.IDAL.csprojResolveAssemblyReference.cache
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IDAL\obj\Debug\MUESystem.IDAL.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IDAL\obj\Debug\MUESystem.IDAL.pdb

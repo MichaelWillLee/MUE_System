@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using MUESystem.BLL;
 using MUESystem.IBLL;
-using MUESystem.Web.Areas.Manage.Models;
+using MUESystem.Web.ModelsView;
 
-namespace MUESystem.Web.Areas.Manage.Controllers
+namespace MUESystem.Web.Controllers
 {
     public class LoginController : Controller
     {
@@ -15,7 +15,6 @@ namespace MUESystem.Web.Areas.Manage.Controllers
         public LoginController() { userService = new UserService(); }
 
         [AllowAnonymous]
-        // GET: Manage/Login
         public ActionResult Index()
         {
             return View();
@@ -28,21 +27,20 @@ namespace MUESystem.Web.Areas.Manage.Controllers
         {
             if (ModelState.IsValid)
             {
-                //var user = userService.Find(a => a.UserName == viewUser.UserName);
-                var user = userService.Find(viewUser.LoginName);
+                var user = userService.Find(viewUser.UserName);
                 if (user == null)
                 {
-                    ModelState.AddModelError("LoginName", "用户名不存在");
+                    //ModelState.AddModelError("LoginName", "用户名不存在");
                 }
                 else if (viewUser.Password != user.Password)
                 {
-                    ModelState.AddModelError("Password", "密码不正确");
+                    //ModelState.AddModelError("Password", "密码不正确");
                 }
                 else
                 {
-                    Session.Add("UserName", viewUser.LoginName);
+                    Session.Add("UserName", viewUser.UserName);
                     Session.Add("Password", viewUser.Password);
-                    //return RedirectToAction("Index", "Welcome");
+                    //return RedirectToAction("Index", "Home", new { area = "" });
                 }
             }
             return View(viewUser);

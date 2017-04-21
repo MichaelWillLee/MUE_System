@@ -20,7 +20,7 @@ namespace MUESystem.Model
         /// 用户名
         /// </summary>
         [Required(ErrorMessage = "必填")]
-        [StringLength(20, MinimumLength = 4, ErrorMessage = "{1}到{0}个字符")]
+        [StringLength(20, MinimumLength = 4)]
         [Display(Name = "用户名")]
         public string UserName { get; set; }
 
@@ -28,7 +28,7 @@ namespace MUESystem.Model
         /// 显示名
         /// </summary>
         [Required(ErrorMessage = "必填")]
-        [StringLength(20, MinimumLength = 2, ErrorMessage = "{1}到{0}个字符")]
+        [StringLength(20, MinimumLength = 2)]
         [Display(Name = "显示名")]
         public string DisplayName { get; set; }
 
@@ -52,7 +52,6 @@ namespace MUESystem.Model
         /// 用户状态<br />
         /// 0正常，1锁定
         /// </summary>
-        [DefaultValue(0)]
         public int Status { get; set; }
 
     }

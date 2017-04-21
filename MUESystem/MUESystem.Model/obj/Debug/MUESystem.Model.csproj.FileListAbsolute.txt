@@ -7,3 +7,12 @@ d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.Model\bin\Debug\
 d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.Model\bin\Debug\EntityFramework.SqlServer.xml
 d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.Model\obj\Debug\MUESystem.Model.dll
 d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.Model\obj\Debug\MUESystem.Model.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Model\bin\Debug\MUESystem.Model.dll.config
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Model\bin\Debug\MUESystem.Model.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Model\bin\Debug\MUESystem.Model.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Model\bin\Debug\EntityFramework.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Model\bin\Debug\EntityFramework.xml
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Model\obj\Debug\MUESystem.Model.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Model\obj\Debug\MUESystem.Model.pdb

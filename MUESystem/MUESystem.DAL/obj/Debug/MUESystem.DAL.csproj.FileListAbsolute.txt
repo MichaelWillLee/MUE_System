@@ -15,3 +15,20 @@ d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\obj\Debug\MU
 d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.InitialCreate.resources
 d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.csproj.GenerateResource.Cache
 D:\我的文档\Visual Studio 2013\Projects\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.updateUsers.resources
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Debug\MUESystem.DAL.dll.config
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Debug\MUESystem.DAL.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Debug\MUESystem.DAL.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Debug\EntityFramework.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Debug\MUESystem.IDAL.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Debug\MUESystem.Model.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Debug\MUESystem.IDAL.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Debug\MUESystem.Model.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Debug\EntityFramework.xml
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.csprojResolveAssemblyReference.cache
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.InitialCreate.resources
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.updateUsers.resources
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.csproj.GenerateResource.Cache
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.pdb

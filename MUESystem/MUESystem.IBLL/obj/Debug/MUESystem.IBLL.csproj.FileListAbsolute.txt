@@ -5,3 +5,10 @@ d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.IBLL\bin\Debug\M
 d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.IBLL\obj\Debug\MUESystem.IBLL.csprojResolveAssemblyReference.cache
 d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.IBLL\obj\Debug\MUESystem.IBLL.dll
 d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.IBLL\obj\Debug\MUESystem.IBLL.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IBLL\bin\Debug\MUESystem.IBLL.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IBLL\bin\Debug\MUESystem.IBLL.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IBLL\bin\Debug\MUESystem.Model.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IBLL\bin\Debug\MUESystem.Model.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IBLL\obj\Debug\MUESystem.IBLL.csprojResolveAssemblyReference.cache
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IBLL\obj\Debug\MUESystem.IBLL.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IBLL\obj\Debug\MUESystem.IBLL.pdb
