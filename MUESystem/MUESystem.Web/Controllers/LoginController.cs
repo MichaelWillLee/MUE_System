@@ -30,17 +30,17 @@ namespace MUESystem.Web.Controllers
                 var user = userService.Find(viewUser.UserName);
                 if (user == null)
                 {
-                    //ModelState.AddModelError("LoginName", "用户名不存在");
+                    ModelState.AddModelError("UserName", "用户名不存在");
                 }
                 else if (viewUser.Password != user.Password)
                 {
-                    //ModelState.AddModelError("Password", "密码不正确");
+                    ModelState.AddModelError("Password", "密码不正确");
                 }
                 else
                 {
                     Session.Add("UserName", viewUser.UserName);
                     Session.Add("Password", viewUser.Password);
-                    //return RedirectToAction("Index", "Home", new { area = "" });
+                    return RedirectToAction("Index", "Home");
                 }
             }
             return View(viewUser);

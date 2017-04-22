@@ -14,7 +14,7 @@ namespace MUESystem.Model
     public class User
     {
         [Key]
-        public int UserID { get; set; }
+        public Guid ID { get; set; }
 
         /// <summary>
         /// 用户名
@@ -50,9 +50,9 @@ namespace MUESystem.Model
 
         /// <summary>
         /// 用户状态<br />
-        /// 0正常，1锁定
+        /// Y正常，N锁定
         /// </summary>
-        public int Status { get; set; }
+        public string Status { get; set; }
 
     }
 }

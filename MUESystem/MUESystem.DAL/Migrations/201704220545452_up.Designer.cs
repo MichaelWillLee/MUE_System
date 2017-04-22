@@ -7,13 +7,13 @@ namespace MUESystem.DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class updateUsers : IMigrationMetadata
+    public sealed partial class up : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(updateUsers));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(up));
         
         string IMigrationMetadata.Id
         {
-            get { return "201704180111163_updateUsers"; }
+            get { return "201704220545452_up"; }
         }
         
         string IMigrationMetadata.Source

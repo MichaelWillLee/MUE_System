@@ -28,7 +28,7 @@ E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Debug\EntityFramework.xml
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Debug\EntityFramework.SqlServer.xml
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.csprojResolveAssemblyReference.cache
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.InitialCreate.resources
-E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.updateUsers.resources
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.csproj.GenerateResource.Cache
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.dll
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.up.resources

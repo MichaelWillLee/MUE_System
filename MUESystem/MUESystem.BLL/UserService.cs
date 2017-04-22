@@ -30,16 +30,18 @@ namespace MUESystem.BLL
 
         public User Find(string userName) { return CurrentRepository.Find(u => u.UserName == userName); }
 
+        public User Find(Guid ID) { return CurrentRepository.Find(u => u.ID == ID); }
+
         public IQueryable<User> FindPageList(out int totalRecord, int pageIndex, int pageSize, int order)
         {
             IQueryable<User> _users = CurrentRepository.Entities;
             switch (order)
             {
                 case 0:
-                    _users = _users.OrderBy(c => c.UserID);
+                    _users = _users.OrderBy(c => c.ID);
                     break;
                 case 1:
-                    _users = _users.OrderByDescending(c => c.UserID);
+                    _users = _users.OrderByDescending(c => c.ID);
                     break;
                 //case 2:
                 //    _users = _users.OrderBy(c => c.RegistrationTime);
@@ -54,7 +56,7 @@ namespace MUESystem.BLL
                 //    _users = _users.OrderByDescending(c => c.LoginTime);
                 //    break;
                 default:
-                    _users = _users.OrderByDescending(c => c.UserID);
+                    _users = _users.OrderByDescending(c => c.ID);
                     break;
             }
             totalRecord = _users.Count();

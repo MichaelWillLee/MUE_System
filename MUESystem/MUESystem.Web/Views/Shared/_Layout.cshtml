@@ -24,8 +24,21 @@
                     <li>@Html.ActionLink("主页", "Index", "Home")</li>
                     <li>@Html.ActionLink("关于", "About", "Home")</li>
                     <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            管理 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("用户管理", "Index", "UserManage")</li>
+                            <li><a href="#">未实现</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">未实现</a></li>
+                        </ul> 
+                    </li>
                 </ul>
             </div>
+            
         </div>
     </div>
     <div class="container body-content">

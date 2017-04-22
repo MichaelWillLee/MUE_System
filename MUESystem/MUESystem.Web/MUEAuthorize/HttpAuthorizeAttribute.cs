@@ -26,7 +26,7 @@ namespace MUESystem.Web.MUEAuthorize
         /// <param name="filterContext"></param>
         protected override void HandleUnauthorizedRequest(AuthorizationContext filterContext)
         {
-            filterContext.Result = new RedirectResult("~/");
+            filterContext.Result = new RedirectResult("~/Login");
         }
     }
 }

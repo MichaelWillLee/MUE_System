@@ -6,8 +6,12 @@ using System.Web.Mvc;
 
 namespace MUESystem.Web.Controllers
 {
-    public class BaseController : Controller
+    public class ErrorController : Controller
     {
-       
+        // GET: Error
+        public ActionResult Index()
+        {
+            return View();
+        }
     }
 }
