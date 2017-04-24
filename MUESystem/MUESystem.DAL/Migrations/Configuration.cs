@@ -10,7 +10,6 @@ namespace MUESystem.DAL.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "MUESystem.DAL.MUEDbContext";
         }
 
         protected override void Seed(MUESystem.DAL.MUEDbContext context)

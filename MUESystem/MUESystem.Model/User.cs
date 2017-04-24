@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,8 +14,8 @@ namespace MUESystem.Model
     /// </summary>
     public class User
     {
-        [Key]
-        public Guid ID { get; set; }
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { get; set; }
 
         /// <summary>
         /// 用户名

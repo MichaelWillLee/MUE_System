@@ -33,13 +33,6 @@ namespace MUESystem.IBLL
         User Find(string userName);
 
         /// <summary>
-        /// 查找用户
-        /// </summary>
-        /// <param name="ID">用户id</param>
-        /// <returns></returns>
-        User Find(Guid ID);
-       
-        /// <summary>
         /// 用户列表
         /// </summary>
         /// <param name="pageIndex">页码数</param>

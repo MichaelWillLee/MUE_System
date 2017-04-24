@@ -47,6 +47,7 @@ d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.Web\bin\MUESyste
 d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.Web\bin\MUESystem.DAL.dll
 d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.Web\bin\MUESystem.BLL.pdb
 d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.Web\bin\MUESystem.DAL.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Web\obj\Debug\MUESystem.Web.csprojResolveAssemblyReference.cache
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.Web\bin\MUESystem.Web.dll.config
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.Web\bin\MUESystem.Web.dll
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.Web\bin\MUESystem.Web.pdb
@@ -93,6 +94,7 @@ E:\MichaelGit\MUE_System\MUESystem\MUESystem.Web\bin\zh-Hans\System.Web.Razor.re
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.Web\bin\zh-Hans\System.Web.WebPages.resources.dll
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.Web\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.Web\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-E:\MichaelGit\MUE_System\MUESystem\MUESystem.Web\obj\Debug\MUESystem.Web.csprojResolveAssemblyReference.cache
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.Web\obj\Debug\MUESystem.Web.dll
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.Web\obj\Debug\MUESystem.Web.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Web\bin\log4net.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Web\bin\log4net.xml

@@ -6,4 +6,3 @@ E:\MichaelGit\MUE_System\MUESystem\MUESystem.Common\bin\Debug\MUESystem.Common.d
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.Common\bin\Debug\MUESystem.Common.pdb
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.Common\obj\Debug\MUESystem.Common.dll
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.Common\obj\Debug\MUESystem.Common.pdb
-E:\MichaelGit\MUE_System\MUESystem\MUESystem.Common\obj\Debug\MUESystem.Common.csprojResolveAssemblyReference.cache

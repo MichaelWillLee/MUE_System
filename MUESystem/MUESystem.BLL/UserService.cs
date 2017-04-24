@@ -30,8 +30,6 @@ namespace MUESystem.BLL
 
         public User Find(string userName) { return CurrentRepository.Find(u => u.UserName == userName); }
 
-        public User Find(Guid ID) { return CurrentRepository.Find(u => u.ID == ID); }
-
         public IQueryable<User> FindPageList(out int totalRecord, int pageIndex, int pageSize, int order)
         {
             IQueryable<User> _users = CurrentRepository.Entities;

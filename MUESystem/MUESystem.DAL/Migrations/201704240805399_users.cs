@@ -3,7 +3,7 @@ namespace MUESystem.DAL.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class users : DbMigration
     {
         public override void Up()
         {
@@ -11,16 +11,14 @@ namespace MUESystem.DAL.Migrations
                 "dbo.Users",
                 c => new
                     {
-                        UserID = c.Int(nullable: false, identity: true),
+                        ID = c.Int(nullable: false, identity: true),
                         UserName = c.String(nullable: false, maxLength: 20),
                         DisplayName = c.String(nullable: false, maxLength: 20),
                         Password = c.String(nullable: false),
                         Email = c.String(nullable: false),
-                        Status = c.Int(nullable: false),
-                        RegistrationTime = c.DateTime(nullable: false),
-                        LoginTime = c.DateTime(nullable: false),
+                        Status = c.String(),
                     })
-                .PrimaryKey(t => t.UserID);
+                .PrimaryKey(t => t.ID);
             
         }
         

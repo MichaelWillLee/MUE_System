@@ -7,13 +7,13 @@ namespace MUESystem.DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitialCreate : IMigrationMetadata
+    public sealed partial class users : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(users));
         
         string IMigrationMetadata.Id
         {
-            get { return "201704170948459_InitialCreate"; }
+            get { return "201704240805399_users"; }
         }
         
         string IMigrationMetadata.Source
