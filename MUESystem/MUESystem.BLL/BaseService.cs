@@ -30,5 +30,7 @@ namespace MUESystem.BLL
         {
             return entitys.Skip((pageIndex - 1) * pageSize).Take(pageSize);
         }
+
+        public IQueryable<T> Entities { get { return CurrentRepository.Entities; } }
     }
 }

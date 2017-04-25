@@ -28,7 +28,9 @@ namespace MUESystem.Web.Controllers
             if (ModelState.IsValid)
             {
                 var user = userService.Find(viewUser.UserName);
-                if (user == null)
+
+                //存在并且状态为Y
+                if (user == null && user.Status == EnumVal.GetStatusVal(Status.Y))
                 {
                     ModelState.AddModelError("UserName", "用户名不存在");
                 }

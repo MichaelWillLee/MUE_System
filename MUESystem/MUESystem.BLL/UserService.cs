@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using MUESystem.DAL;
@@ -28,11 +29,24 @@ namespace MUESystem.BLL
 
         public bool Exist(string userName) { return CurrentRepository.Exist(u => u.UserName == userName); }
 
+        public bool Exist(Expression<Func<User, bool>> anyLambda) {
+            return CurrentRepository.Exist(anyLambda);
+        }
+
         public User Find(string userName) { return CurrentRepository.Find(u => u.UserName == userName); }
 
+        /// <summary>
+        /// 用户列表
+        /// </summary>
+        /// <param name="pageIndex">页码数</param>
+        /// <param name="pageSize">每页记录数</param>
+        /// <param name="totalRecord">总记录数</param>
+        /// <param name="order">排序：0-ID升序（默认），1ID降序，2注册时间升序，3注册时间降序，4登录时间升序，5登录时间降序</param>
+        /// <returns></returns>
         public IQueryable<User> FindPageList(out int totalRecord, int pageIndex, int pageSize, int order)
         {
             IQueryable<User> _users = CurrentRepository.Entities;
+
             switch (order)
             {
                 case 0:
@@ -41,18 +55,6 @@ namespace MUESystem.BLL
                 case 1:
                     _users = _users.OrderByDescending(c => c.ID);
                     break;
-                //case 2:
-                //    _users = _users.OrderBy(c => c.RegistrationTime);
-                //    break;
-                //case 3:
-                //    _users = _users.OrderByDescending(c => c.RegistrationTime);
-                //    break;
-                //case 4:
-                //    _users = _users.OrderBy(c => c.LoginTime);
-                //    break;
-                //case 5:
-                //    _users = _users.OrderByDescending(c => c.LoginTime);
-                //    break;
                 default:
                     _users = _users.OrderByDescending(c => c.ID);
                     break;

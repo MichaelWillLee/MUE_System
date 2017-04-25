@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -48,5 +49,10 @@ namespace MUESystem.IBLL
         /// <param name="pageSize">页记录数</param>
         /// <returns></returns>
         IQueryable<T> PageList(IQueryable<T> entitys, int pageIndex, int pageSize);
+
+        /// <summary>
+        /// 数据实体列表
+        /// </summary>
+        IQueryable<T> Entities { get; }
     }
 }

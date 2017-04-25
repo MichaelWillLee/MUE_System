@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using MUESystem.Model;
@@ -25,6 +26,7 @@ namespace MUESystem.IBLL
         /// <returns>布尔值</returns>
         bool Exist(string userName);
 
+        bool Exist(Expression<Func<User, bool>> anyLambda);
         /// <summary>
         /// 查找用户
         /// </summary>

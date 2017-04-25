@@ -1,24 +1,43 @@
-﻿@model IEnumerable<MUESystem.Model.User>
+﻿@*@model IEnumerable<MUESystem.Model.User>*@
+@model PagedList.IPagedList<MUESystem.Model.User>
+@using PagedList.Mvc
 
+@*<script type="text/javascript">
+    $(document).ready(function () {
+        $("#search").click(function () {
+            var textVal = $("#txtSearch").val;
+            if (textVal == "") {
+                alert('请输入查询用户登录名');
+                return false;
+            }
+        });
+    });
+</script>*@
+<form action="~/Views/UserManage/Index.cshtml">
 <p>
-    @Html.ActionLink("Create New", "Creat")
+    @Html.ActionLink("添加新用户", "Creat")
+</p>
+<p>
+    <div class="input-group">
+        登录名：<input type="text" id="txtSearch" class="form-control" placeholder="登录名"><input type="submit" id="search" class="btn" value="查询" />
+    </div>
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.UserName)
+            @*@Html.DisplayNameFor(model => model.UserName)*@ 登录名
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DisplayName)
+            @*@Html.DisplayNameFor(model => model.DisplayName)*@ 显示名
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Password)
+            @*@Html.DisplayNameFor(model => model.Password)*@ 密码
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Email)
+            @*@Html.DisplayNameFor(model => model.Email)*@邮箱
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Status)
+            @*@Html.DisplayNameFor(model => model.Status)*@状态
         </th>
         <th></th>
     </tr>
@@ -49,3 +68,8 @@
 }
 
 </table>
+每页 @Model.PageSize 条记录，共 @Model.PageCount 页，当前第 @Model.PageNumber 页
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+
+</form>  
+  

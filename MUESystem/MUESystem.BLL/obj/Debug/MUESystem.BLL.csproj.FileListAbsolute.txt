@@ -13,7 +13,6 @@ d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.BLL\bin\Debug\MU
 d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.BLL\bin\Debug\EntityFramework.xml
 d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.BLL\obj\Debug\MUESystem.BLL.dll
 d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.BLL\obj\Debug\MUESystem.BLL.pdb
-E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\obj\Debug\MUESystem.BLL.csprojResolveAssemblyReference.cache
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Debug\MUESystem.BLL.dll
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Debug\MUESystem.BLL.pdb
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Debug\MUESystem.DAL.dll
@@ -26,5 +25,6 @@ E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Debug\MUESystem.IBLL.pdb
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Debug\MUESystem.IDAL.pdb
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Debug\MUESystem.Model.pdb
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Debug\EntityFramework.xml
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\obj\Debug\MUESystem.BLL.csprojResolveAssemblyReference.cache
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\obj\Debug\MUESystem.BLL.dll
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\obj\Debug\MUESystem.BLL.pdb

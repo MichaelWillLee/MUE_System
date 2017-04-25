@@ -9,8 +9,13 @@ using MUESystem.IBLL;
 using MUESystem.Web.MUEAuthorize;
 using MUESystem.Model;
 using MUESystem.Common.DataTimeCommon;
-using log4net;
-using MUESystem.Web.Log;
+using MUESystem.Common.LogCommon;
+using System.Text;
+using PagedList;
+using MUESystem.DAL;
+using MUESystem.Web.Configer;
+
+
 
 namespace MUESystem.Web.Controllers
 {
@@ -18,16 +23,29 @@ namespace MUESystem.Web.Controllers
     {
         private IUserService userService;
         public UserManageController() { userService = new UserService(); }
-        private static readonly ILog logs = LogHelper.GetInstance();
+
         /// <summary>
         /// 显示用户列表GET
         /// </summary>
         /// <returns></returns>
         [HttpAuthorize]
-        public ActionResult Index()
+        public ActionResult Index(int page = 1)
         {
-            int totalRecord = 0;
-            return View(userService.FindPageList(out totalRecord, 1, 10, 0).ToList());
+            try
+            {
+                //每页显示多少条  
+                int pageSize = Convert.ToInt32(ConfigerHelper.GetVal("pageSize"));
+
+                //通过ToPagedList扩展方法进行分页  
+                IPagedList<User> pagedList = userService.Entities.OrderBy(x => x.ID).ToPagedList(page, pageSize);
+
+                //将分页处理后的列表传给View  
+                return View(pagedList);
+            }
+            catch(Exception ex) {
+                Log.Error("UserManageController-Index-",ex);
+            }
+            return View();
         }
 
         /// <summary>
@@ -70,8 +88,8 @@ namespace MUESystem.Web.Controllers
                     }
                 }
             }
-            catch (Exception ex){ 
-            
+            catch (Exception ex){
+                Log.Error("UserManageController-Edit-post-", ex);
             }
             return View(user);
         }
@@ -100,6 +118,11 @@ namespace MUESystem.Web.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    var ret = userService.Exist(x=>x.UserName == user.UserName || x.DisplayName == user.DisplayName);
+                    if (ret) {
+                        return View(user);
+                    }
+                    user.Status = EnumVal.GetStatusVal(Status.Y);
                     User newUser = userService.Add(user);
                     if (!string.IsNullOrWhiteSpace(newUser.UserName))
                     {
@@ -109,8 +132,7 @@ namespace MUESystem.Web.Controllers
             }
             catch (Exception ex)
             {
-                string ret = ex.Message;
-               
+                Log.Error("Post新增用户：",ex);
             }
             return View(user);
         }
@@ -121,25 +143,29 @@ namespace MUESystem.Web.Controllers
             try
             {
                 var userDelet = userService.Find(id);
-                if (userDelet != null) {
-                    userService.Delete(userDelet);
+                if (userDelet != null && !userDelet.UserName.Equals("admin")) {
+                    //只是更改状态并不实际删除
+                    userDelet.Status = EnumVal.GetStatusVal(Status.N);
+                    userService.Update(userDelet);
                     return RedirectToAction("Index", "UserManage");
                 }
             }
             catch (Exception ex)
             {
-                string exdd = ex.Message;
+                Log.Error("UserManage-Delete-", ex);
             }
-            return View();
+            return RedirectToAction("Index", "UserManage");
         }
 
         [HttpAuthorize]
         public ActionResult Details(int id) {
-            string time = DataTimeHelper.GetNowTimeNosplit();
-            logs.Error("错误测试");
             Model.User user = userService.Find(id);
             if (user == null)
             {
+                StringBuilder sb = new StringBuilder();
+                sb.Append("UserManage-Details-");
+                sb.Append("id=").Append(id.ToString());
+                Log.Error(sb.ToString());
                 return HttpNotFound();
             }
             return View(user);

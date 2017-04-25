@@ -50,8 +50,8 @@ namespace MUESystem.Model
         public string Email { get; set; }
 
         /// <summary>
-        /// 用户状态<br />
-        /// Y正常，N锁定
+        /// 状态
+        /// Y正常、N锁定
         /// </summary>
         public string Status { get; set; }
 

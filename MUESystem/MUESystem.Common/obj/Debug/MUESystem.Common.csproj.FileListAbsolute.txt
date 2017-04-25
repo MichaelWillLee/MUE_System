@@ -4,5 +4,8 @@ d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.Common\obj\Debug
 d:\我的文档\visual studio 2013\Projects\MUESystem\MUESystem.Common\obj\Debug\MUESystem.Common.pdb
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.Common\bin\Debug\MUESystem.Common.dll
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.Common\bin\Debug\MUESystem.Common.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Common\bin\Debug\log4net.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Common\bin\Debug\log4net.xml
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.Common\obj\Debug\MUESystem.Common.dll
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.Common\obj\Debug\MUESystem.Common.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Common\obj\Debug\MUESystem.Common.csprojResolveAssemblyReference.cache
