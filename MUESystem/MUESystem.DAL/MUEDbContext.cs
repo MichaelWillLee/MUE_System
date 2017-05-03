@@ -13,9 +13,15 @@ namespace MUESystem.DAL
     /// </summary>
     public class MUEDbContext : DbContext
     {
+        /// <summary>
+        /// 用户表
+        /// </summary>
         public DbSet<User> Users { get; set; }
 
-
+        /// <summary>
+        /// 字典表
+        /// </summary>
+        public DbSet<Dictionary> Dictionarys { get; set; }
 
         public MUEDbContext()
             : base("MUESystem")

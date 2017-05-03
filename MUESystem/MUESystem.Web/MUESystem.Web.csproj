@@ -133,6 +133,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Configer\ConfigerHelper.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\DictionariesController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -189,6 +190,11 @@
     <Content Include="Views\UserManage\Edit.cshtml" />
     <Content Include="Views\UserManage\Creat.cshtml" />
     <Content Include="Views\UserManage\Details.cshtml" />
+    <Content Include="Views\Dictionaries\Create.cshtml" />
+    <Content Include="Views\Dictionaries\Delete.cshtml" />
+    <Content Include="Views\Dictionaries\Details.cshtml" />
+    <Content Include="Views\Dictionaries\Edit.cshtml" />
+    <Content Include="Views\Dictionaries\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

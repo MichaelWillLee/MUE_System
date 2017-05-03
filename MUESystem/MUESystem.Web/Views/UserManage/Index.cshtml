@@ -2,25 +2,24 @@
 @model PagedList.IPagedList<MUESystem.Model.User>
 @using PagedList.Mvc
 
-@*<script type="text/javascript">
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script type="text/javascript">
     $(document).ready(function () {
-        $("#search").click(function () {
-            var textVal = $("#txtSearch").val;
-            if (textVal == "") {
-                alert('请输入查询用户登录名');
-                return false;
+        $("#BtnSearch").click(function(){
+            var search = $("#SearchString").val().trim();
+            if (search.length == 0) {
+                alert('用户名不能为空');
             }
         });
     });
-</script>*@
+</script>
 <form action="/UserManage/Index">
-    @Html.AntiForgeryToken()
     <p>
         @Html.ActionLink("添加新用户", "Creat")
     </p>
     <p>
         登录名: @Html.TextBox("SearchString") 
-        <input type="submit" class="btn-default" value="查询" />
+        <input type="submit" class="btn" id="BtnSearch" value="查询" />
 
     </p>
     <table class="table">

@@ -17,6 +17,10 @@ namespace MUESystem.DAL
         /// </summary>
         public static IUserRepository UserRepository { get { return new UserRepository(); } }
 
-
+        /// <summary>
+        /// 字典仓储
+        /// </summary>
+        public static IDictionaryRepository DictionaryRepository { get { return new DictionaryRepository(); } }
+        
     }
 }
