@@ -29,18 +29,27 @@ namespace MUESystem.Web.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpAuthorize]
-        public ActionResult Index(int page = 1)
+        public ActionResult Index(string SearchString, int page = 1)
         {
             try
             {
                 //每页显示多少条  
                 int pageSize = Convert.ToInt32(ConfigerHelper.GetVal("pageSize"));
+                if (string.IsNullOrWhiteSpace(SearchString))
+                {
+                    //通过ToPagedList扩展方法进行分页  
+                    IPagedList<User> pagedList = userService.Entities.OrderBy(x => x.ID).ToPagedList(page, pageSize);
 
-                //通过ToPagedList扩展方法进行分页  
-                IPagedList<User> pagedList = userService.Entities.OrderBy(x => x.ID).ToPagedList(page, pageSize);
+                    //将分页处理后的列表传给View  
+                    return View(pagedList);
+                }
+                else {
+                    //通过ToPagedList扩展方法进行分页  
+                    IPagedList<User> pagedList = userService.Entities.Where(x => x.UserName.Contains(SearchString)).OrderBy(x => x.ID).ToPagedList(page, pageSize);
 
-                //将分页处理后的列表传给View  
-                return View(pagedList);
+                    //将分页处理后的列表传给View  
+                    return View(pagedList);
+                }
             }
             catch(Exception ex) {
                 Log.Error("UserManageController-Index-",ex);

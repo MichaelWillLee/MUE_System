@@ -13,63 +13,65 @@
         });
     });
 </script>*@
-<form action="~/Views/UserManage/Index.cshtml">
-<p>
-    @Html.ActionLink("添加新用户", "Creat")
-</p>
-<p>
-    <div class="input-group">
-        登录名：<input type="text" id="txtSearch" class="form-control" placeholder="登录名"><input type="submit" id="search" class="btn" value="查询" />
-    </div>
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @*@Html.DisplayNameFor(model => model.UserName)*@ 登录名
-        </th>
-        <th>
-            @*@Html.DisplayNameFor(model => model.DisplayName)*@ 显示名
-        </th>
-        <th>
-            @*@Html.DisplayNameFor(model => model.Password)*@ 密码
-        </th>
-        <th>
-            @*@Html.DisplayNameFor(model => model.Email)*@邮箱
-        </th>
-        <th>
-            @*@Html.DisplayNameFor(model => model.Status)*@状态
-        </th>
-        <th></th>
-    </tr>
+<form action="/UserManage/Index">
+    @Html.AntiForgeryToken()
+    <p>
+        @Html.ActionLink("添加新用户", "Creat")
+    </p>
+    <p>
+        登录名: @Html.TextBox("SearchString") 
+        <input type="submit" class="btn-default" value="查询" />
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DisplayName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Password)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Status)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-        </td>
-    </tr>
-}
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @*@Html.DisplayNameFor(model => model.UserName)*@ 登录名
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.DisplayName)*@ 显示名
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Password)*@ 密码
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Email)*@邮箱
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Status)*@状态
+            </th>
+            <th></th>
+        </tr>
 
-</table>
-每页 @Model.PageSize 条记录，共 @Model.PageCount 页，当前第 @Model.PageNumber 页
-@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DisplayName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+    每页 @Model.PageSize 条记录，共 @Model.PageCount 页，当前第 @Model.PageNumber 页
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
 
 </form>  
   
