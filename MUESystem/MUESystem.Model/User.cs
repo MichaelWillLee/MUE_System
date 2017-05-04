@@ -44,7 +44,6 @@ namespace MUESystem.Model
         /// <summary>
         /// 邮箱
         /// </summary>
-        [Required(ErrorMessage = "必填")]
         [Display(Name = "邮箱")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }

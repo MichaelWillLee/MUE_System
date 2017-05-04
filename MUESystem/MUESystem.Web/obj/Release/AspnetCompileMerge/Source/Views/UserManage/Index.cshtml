@@ -1,0 +1,76 @@
+﻿@*@model IEnumerable<MUESystem.Model.User>*@
+@model PagedList.IPagedList<MUESystem.Model.User>
+@using PagedList.Mvc
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#BtnSearch").click(function(){
+            var search = $("#SearchString").val().trim();
+            if (search.length == 0) {
+                alert('用户名不能为空');
+            }
+        });
+    });
+</script>
+<form action="/UserManage/Index">
+    <p>
+        @Html.ActionLink("添加新用户", "Creat")
+    </p>
+    <p>
+        登录名: @Html.TextBox("SearchString") 
+        <input type="submit" class="btn" id="BtnSearch" value="查询" />
+
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @*@Html.DisplayNameFor(model => model.UserName)*@ 登录名
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.DisplayName)*@ 显示名
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Password)*@ 密码
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Email)*@邮箱
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Status)*@状态
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DisplayName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+    每页 @Model.PageSize 条记录，共 @Model.PageCount 页，当前第 @Model.PageNumber 页
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+
+</form>  
+  

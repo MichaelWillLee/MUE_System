@@ -32,3 +32,5 @@ E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.csproj.
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.dll
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.pdb
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.dic.resources
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.usersEmail.resources
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations._20170504.resources

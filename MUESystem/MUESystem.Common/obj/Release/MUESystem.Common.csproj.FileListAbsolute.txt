@@ -1,0 +1,6 @@
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Common\bin\Release\MUESystem.Common.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Common\bin\Release\MUESystem.Common.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Common\bin\Release\log4net.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Common\bin\Release\log4net.xml
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Common\obj\Release\MUESystem.Common.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Common\obj\Release\MUESystem.Common.pdb

@@ -34,7 +34,7 @@ namespace MUESystem.Web.Controllers
             try
             {
                 //每页显示多少条  
-                int pageSize = Convert.ToInt32(ConfigerHelper.GetVal("pageSize"));
+                //int pageSize = ConfigerHelper.GetPageSize();
                 if (string.IsNullOrWhiteSpace(SearchString))
                 {
                     //通过ToPagedList扩展方法进行分页  

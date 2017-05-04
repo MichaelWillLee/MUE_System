@@ -1,0 +1,17 @@
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Release\MUESystem.DAL.dll.config
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Release\MUESystem.DAL.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Release\MUESystem.DAL.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Release\EntityFramework.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Release\EntityFramework.SqlServer.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Release\MUESystem.IDAL.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Release\MUESystem.Model.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Release\MUESystem.IDAL.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Release\MUESystem.Model.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Release\EntityFramework.xml
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\bin\Release\EntityFramework.SqlServer.xml
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Release\MUESystem.DAL.csprojResolveAssemblyReference.cache
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Release\MUESystem.DAL.Migrations.users.resources
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Release\MUESystem.DAL.Migrations.dic.resources
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Release\MUESystem.DAL.csproj.GenerateResource.Cache
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Release\MUESystem.DAL.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Release\MUESystem.DAL.pdb

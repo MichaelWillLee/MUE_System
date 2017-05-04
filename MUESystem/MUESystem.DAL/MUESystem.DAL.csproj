@@ -56,6 +56,14 @@
     <Compile Include="Migrations\201705030915311_dic.Designer.cs">
       <DependentUpon>201705030915311_dic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705040214404_usersEmail.cs" />
+    <Compile Include="Migrations\201705040214404_usersEmail.Designer.cs">
+      <DependentUpon>201705040214404_usersEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705040959119_20170504.cs" />
+    <Compile Include="Migrations\201705040959119_20170504.Designer.cs">
+      <DependentUpon>201705040959119_20170504.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MUEDbContext.cs" />
     <Compile Include="MUEDbContextFactory.cs" />
@@ -83,6 +91,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705030915311_dic.resx">
       <DependentUpon>201705030915311_dic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705040214404_usersEmail.resx">
+      <DependentUpon>201705040214404_usersEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705040959119_20170504.resx">
+      <DependentUpon>201705040959119_20170504.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,15 @@
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Release\MUESystem.BLL.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Release\MUESystem.BLL.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Release\MUESystem.DAL.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Release\MUESystem.IBLL.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Release\MUESystem.IDAL.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Release\MUESystem.Model.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Release\EntityFramework.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Release\MUESystem.DAL.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Release\MUESystem.IBLL.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Release\MUESystem.IDAL.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Release\MUESystem.Model.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\bin\Release\EntityFramework.xml
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\obj\Release\MUESystem.BLL.csprojResolveAssemblyReference.cache
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\obj\Release\MUESystem.BLL.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.BLL\obj\Release\MUESystem.BLL.pdb

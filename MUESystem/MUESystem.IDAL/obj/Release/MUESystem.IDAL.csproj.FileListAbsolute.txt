@@ -1,0 +1,7 @@
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IDAL\bin\Release\MUESystem.IDAL.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IDAL\bin\Release\MUESystem.IDAL.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IDAL\bin\Release\MUESystem.Model.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IDAL\bin\Release\MUESystem.Model.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IDAL\obj\Release\MUESystem.IDAL.csprojResolveAssemblyReference.cache
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IDAL\obj\Release\MUESystem.IDAL.dll
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.IDAL\obj\Release\MUESystem.IDAL.pdb

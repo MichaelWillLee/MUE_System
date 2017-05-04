@@ -18,5 +18,19 @@ namespace MUESystem.Web.Configer
             }
             return ret;
         }
+
+        /// <summary>
+        /// 获取页面显示条数
+        /// </summary>
+        /// <returns>失败返回-1，成功返回对应配置</returns>
+        public static int GetPageSize() {
+            try {
+                int pageSize = Convert.ToInt32(ConfigerHelper.GetVal("pageSize"));
+                return pageSize;
+            }catch(Exception ex){
+                Log.Error("获取页面显示条数",ex );
+                return -1;
+            }
+        }
     }
 }

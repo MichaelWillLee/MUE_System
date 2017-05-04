@@ -1,0 +1,75 @@
+﻿@model IEnumerable<MUESystem.Model.Dictionary>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SecondCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThirdCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FourthCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FifthCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InfoValue)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reark)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SecondCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThirdCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FourthCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FifthCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InfoValue)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
