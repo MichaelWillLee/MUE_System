@@ -43,12 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataTimeCommon\DataTimeHelper.cs" />
+    <Compile Include="DataTimeCommon\DateTimeHelper.cs" />
     <Compile Include="DirFileCommon\DirFileHelper.cs" />
     <Compile Include="HttpCommon\HttpClientHelper.cs" />
     <Compile Include="LogCommon\Log.cs" />
     <Compile Include="LogCommon\LogHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionCommon\SessionHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

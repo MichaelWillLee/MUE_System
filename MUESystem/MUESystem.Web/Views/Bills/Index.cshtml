@@ -1,0 +1,64 @@
+﻿@*@model IEnumerable<MUESystem.Model.Bill>*@
+@model PagedList.IPagedList<MUESystem.Model.Bill>
+@using PagedList.Mvc
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            收入/支出
+        </th>
+        <th>
+           创建时间
+        </th>
+        <th>
+            金额
+        </th>
+        
+        <th>
+            类型
+        </th>
+        <th>
+            备注
+        </th>
+        <th>
+            操作
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BillType.FirstCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BillMoney)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BillType.InfoValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reark)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
+共 @Model.PageCount 页，当前第 @Model.PageNumber 页
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))

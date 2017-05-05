@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MUESystem.Common.DataTimeCommon
+namespace MUESystem.Common.DateTimeCommon
 {
-    public class DataTimeHelper
+    public class DateTimeHelper
     {
         /// <summary>
         /// 获取现在时间没有分隔的时间字符串
@@ -32,6 +32,7 @@ namespace MUESystem.Common.DataTimeCommon
         public static string GetNowTime() {
             return System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss: ffff");
         }
+
 
         /// <summary>
         /// DateTime转换有分隔的字符串转换

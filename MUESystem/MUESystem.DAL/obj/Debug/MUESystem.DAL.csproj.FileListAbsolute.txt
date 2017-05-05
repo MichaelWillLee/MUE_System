@@ -34,3 +34,9 @@ E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.pdb
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.dic.resources
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.usersEmail.resources
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations._20170504.resources
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.bill.resources
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.billbilltype.resources
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.billuser.resources
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.dictionaystatus.resources
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.status.resources
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.bill1.resources

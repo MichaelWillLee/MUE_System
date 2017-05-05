@@ -64,6 +64,30 @@
     <Compile Include="Migrations\201705040959119_20170504.Designer.cs">
       <DependentUpon>201705040959119_20170504.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705050332154_bill.cs" />
+    <Compile Include="Migrations\201705050332154_bill.Designer.cs">
+      <DependentUpon>201705050332154_bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705050537040_bill-billtype.cs" />
+    <Compile Include="Migrations\201705050537040_bill-billtype.Designer.cs">
+      <DependentUpon>201705050537040_bill-billtype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705050555049_bill-user.cs" />
+    <Compile Include="Migrations\201705050555049_bill-user.Designer.cs">
+      <DependentUpon>201705050555049_bill-user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705050656481_dictionay-status.cs" />
+    <Compile Include="Migrations\201705050656481_dictionay-status.Designer.cs">
+      <DependentUpon>201705050656481_dictionay-status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705050725110_status.cs" />
+    <Compile Include="Migrations\201705050725110_status.Designer.cs">
+      <DependentUpon>201705050725110_status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705050957205_bill1.cs" />
+    <Compile Include="Migrations\201705050957205_bill1.Designer.cs">
+      <DependentUpon>201705050957205_bill1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MUEDbContext.cs" />
     <Compile Include="MUEDbContextFactory.cs" />
@@ -97,6 +121,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705040959119_20170504.resx">
       <DependentUpon>201705040959119_20170504.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705050332154_bill.resx">
+      <DependentUpon>201705050332154_bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705050537040_bill-billtype.resx">
+      <DependentUpon>201705050537040_bill-billtype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705050555049_bill-user.resx">
+      <DependentUpon>201705050555049_bill-user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705050656481_dictionay-status.resx">
+      <DependentUpon>201705050656481_dictionay-status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705050725110_status.resx">
+      <DependentUpon>201705050725110_status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705050957205_bill1.resx">
+      <DependentUpon>201705050957205_bill1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

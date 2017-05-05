@@ -8,7 +8,7 @@ using MUESystem.BLL;
 using MUESystem.IBLL;
 using MUESystem.Web.MUEAuthorize;
 using MUESystem.Model;
-using MUESystem.Common.DataTimeCommon;
+using MUESystem.Common.DateTimeCommon;
 using MUESystem.Common.LogCommon;
 using System.Text;
 using PagedList;
@@ -38,14 +38,14 @@ namespace MUESystem.Web.Controllers
                 if (string.IsNullOrWhiteSpace(SearchString))
                 {
                     //通过ToPagedList扩展方法进行分页  
-                    IPagedList<User> pagedList = userService.Entities.OrderBy(x => x.ID).ToPagedList(page, pageSize);
+                    IPagedList<User> pagedList = userService.Entities.Where(x=>x.Status=="Y").OrderBy(x => x.ID).ToPagedList(page, pageSize);
 
                     //将分页处理后的列表传给View  
                     return View(pagedList);
                 }
                 else {
                     //通过ToPagedList扩展方法进行分页  
-                    IPagedList<User> pagedList = userService.Entities.Where(x => x.UserName.Contains(SearchString)).OrderBy(x => x.ID).ToPagedList(page, pageSize);
+                    IPagedList<User> pagedList = userService.Entities.Where(x => x.UserName.Contains(SearchString) && x.Status=="Y").OrderBy(x => x.ID).ToPagedList(page, pageSize);
 
                     //将分页处理后的列表传给View  
                     return View(pagedList);

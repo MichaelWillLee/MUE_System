@@ -44,6 +44,7 @@ namespace MUESystem.Web.Controllers
                     {
                         Session.Add("UserName", viewUser.UserName);
                         Session.Add("Password", viewUser.Password);
+                        Session.Add("UserID", user.ID);
                         return RedirectToAction("Index", "Home");
                     }
                 }catch(Exception ex){

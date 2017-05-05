@@ -1,0 +1,50 @@
+﻿@model MUESystem.Model.Bill
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Bill</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillMoney)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillMoney)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reark)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

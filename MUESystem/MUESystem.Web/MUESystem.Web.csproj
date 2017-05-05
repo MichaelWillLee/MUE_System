@@ -133,6 +133,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Configer\ConfigerHelper.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\BillsController.cs" />
     <Compile Include="Controllers\DictionariesController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -153,6 +154,19 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="My97DatePickerBeta\demo.htm" />
+    <Content Include="My97DatePickerBeta\My97DatePicker\calendar.js" />
+    <Content Include="My97DatePickerBeta\My97DatePicker\lang\en.js" />
+    <Content Include="My97DatePickerBeta\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="My97DatePickerBeta\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="My97DatePickerBeta\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="My97DatePickerBeta\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="My97DatePickerBeta\My97DatePicker\skin\default\img.gif" />
+    <Content Include="My97DatePickerBeta\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="My97DatePickerBeta\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="My97DatePickerBeta\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="My97DatePickerBeta\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="My97DatePickerBeta\My97DatePicker\WdatePicker.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Log4Net.config">
@@ -198,6 +212,11 @@
     <Content Include="Views\Dictionaries\Details.cshtml" />
     <Content Include="Views\Dictionaries\Edit.cshtml" />
     <Content Include="Views\Dictionaries\Index.cshtml" />
+    <Content Include="Views\Bills\Create.cshtml" />
+    <Content Include="Views\Bills\Delete.cshtml" />
+    <Content Include="Views\Bills\Details.cshtml" />
+    <Content Include="Views\Bills\Edit.cshtml" />
+    <Content Include="Views\Bills\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

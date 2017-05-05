@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using MUESystem.BLL;
 using MUESystem.Common.LogCommon;
 using MUESystem.DAL;
 using MUESystem.Model;
@@ -72,6 +73,7 @@ namespace MUESystem.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                dictionary.Status = EnumVal.GetStatusVal(Status.Y);
                 db.Dictionarys.Add(dictionary);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -135,10 +137,15 @@ namespace MUESystem.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            
             Dictionary dictionary = db.Dictionarys.Find(id);
-            db.Dictionarys.Remove(dictionary);
+            dictionary.Status = "N";
+            db.Entry(dictionary).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
+            //db.Dictionarys.Remove(dictionary);
+            //db.SaveChanges();
+            //return RedirectToAction("Index");
         }
 
         [HttpAuthorize]

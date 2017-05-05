@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MUESystem.BLL
 {
+    /// <summary>
+    /// 数据库中的状态Y,N
+    /// </summary>
     public  enum  Status { Y,N};
 
     /// <summary>

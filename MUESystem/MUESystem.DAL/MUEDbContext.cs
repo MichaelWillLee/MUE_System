@@ -23,6 +23,11 @@ namespace MUESystem.DAL
         /// </summary>
         public DbSet<Dictionary> Dictionarys { get; set; }
 
+        /// <summary>
+        /// 账单表
+        /// </summary>
+        public DbSet<Bill> Bills { get; set; }
+
         public MUEDbContext()
             : base("MUESystem")
         {
