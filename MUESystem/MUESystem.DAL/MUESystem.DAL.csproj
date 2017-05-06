@@ -88,6 +88,14 @@
     <Compile Include="Migrations\201705050957205_bill1.Designer.cs">
       <DependentUpon>201705050957205_bill1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705060240028_updatebillcreatetime.cs" />
+    <Compile Include="Migrations\201705060240028_updatebillcreatetime.Designer.cs">
+      <DependentUpon>201705060240028_updatebillcreatetime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705060244413_billcreatperson.cs" />
+    <Compile Include="Migrations\201705060244413_billcreatperson.Designer.cs">
+      <DependentUpon>201705060244413_billcreatperson.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MUEDbContext.cs" />
     <Compile Include="MUEDbContextFactory.cs" />
@@ -139,6 +147,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705050957205_bill1.resx">
       <DependentUpon>201705050957205_bill1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705060240028_updatebillcreatetime.resx">
+      <DependentUpon>201705060240028_updatebillcreatetime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705060244413_billcreatperson.resx">
+      <DependentUpon>201705060244413_billcreatperson.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

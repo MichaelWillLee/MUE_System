@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using MUESystem.BLL;
+using MUESystem.Common.DateTimeCommon;
 using MUESystem.Common.LogCommon;
 using MUESystem.DAL;
 using MUESystem.Model;
@@ -25,7 +26,6 @@ namespace MUESystem.Web.Controllers
         {
             try {
                 //IPagedList<User> pagedList = userService.Entities.OrderBy(x => x.ID).ToPagedList(page, pageSize);
-
                 IPagedList<Dictionary> pagedList = db.Dictionarys.OrderBy(x => x.ID).ToPagedList(page,pageSize);
                 //将分页处理后的列表传给View  
                 return View(pagedList);
@@ -34,9 +34,6 @@ namespace MUESystem.Web.Controllers
                 Log.Error("DictionariesController-Index",ex);
                 return View();
             }
-           
-
-           
             //return View(db.Dictionarys.ToList());自动生成
         }
 
@@ -44,16 +41,24 @@ namespace MUESystem.Web.Controllers
         // GET: Dictionaries/Details/5
         public ActionResult Details(int? id)
         {
-            if (id == null)
+            try
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Dictionary dictionary = db.Dictionarys.Find(id);
+                if (dictionary == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(dictionary);
             }
-            Dictionary dictionary = db.Dictionarys.Find(id);
-            if (dictionary == null)
-            {
-                return HttpNotFound();
+            catch(Exception ex) {
+                Log.Error("DictionariesController-Details",ex);
+                return View();
             }
-            return View(dictionary);
+            
         }
 
         [HttpAuthorize]
@@ -71,31 +76,47 @@ namespace MUESystem.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Status,Reark,FirstCode,SecondCode,ThirdCode,FourthCode,FifthCode,InfoValue")] Dictionary dictionary)
         {
-            if (ModelState.IsValid)
+            try
             {
-                dictionary.Status = EnumVal.GetStatusVal(Status.Y);
-                db.Dictionarys.Add(dictionary);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+                if (ModelState.IsValid)
+                {
+                    dictionary.Status = EnumVal.GetStatusVal(Status.Y);
+                    db.Dictionarys.Add(dictionary);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
 
-            return View(dictionary);
+                return View(dictionary);
+            }
+            catch (Exception ex) {
+                Log.Error("DictionarydController-Create-Post",ex);
+                return View();
+            }
+            
         }
 
         [HttpAuthorize]
         // GET: Dictionaries/Edit/5
         public ActionResult Edit(int? id)
         {
-            if (id == null)
+            try
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Dictionary dictionary = db.Dictionarys.Find(id);
+                if (dictionary == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(dictionary);
             }
-            Dictionary dictionary = db.Dictionarys.Find(id);
-            if (dictionary == null)
-            {
-                return HttpNotFound();
+            catch (Exception ex) {
+                Log.Error("DictionarysController-Edit",ex);
+                return View();
             }
-            return View(dictionary);
+            
         }
 
         [HttpAuthorize]
@@ -106,29 +127,45 @@ namespace MUESystem.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,Status,Reark,FirstCode,SecondCode,ThirdCode,FourthCode,FifthCode,InfoValue")] Dictionary dictionary)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Entry(dictionary).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    db.Entry(dictionary).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                return View(dictionary);
             }
-            return View(dictionary);
+            catch(Exception ex) {
+                Log.Error("Dinctionarys-Edit-Post",ex);
+                return View();
+            }
+            
         }
 
         [HttpAuthorize]
         // GET: Dictionaries/Delete/5
         public ActionResult Delete(int? id)
         {
-            if (id == null)
+            try
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Dictionary dictionary = db.Dictionarys.Find(id);
+                if (dictionary == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(dictionary);
             }
-            Dictionary dictionary = db.Dictionarys.Find(id);
-            if (dictionary == null)
-            {
-                return HttpNotFound();
+            catch (Exception ex) {
+                Log.Error("DictionaryController-Delete", ex);
+                return View();
             }
-            return View(dictionary);
+           
         }
 
         [HttpAuthorize]
@@ -137,15 +174,23 @@ namespace MUESystem.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            try
+            {
+                Dictionary dictionary = db.Dictionarys.Find(id);
+                dictionary.Status = "N";
+                db.Entry(dictionary).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+                //db.Dictionarys.Remove(dictionary);
+                //db.SaveChanges();
+                //return RedirectToAction("Index");
+            }
+            catch (Exception ex) {
+                Log.Error("DictionaryController-DeleteConfirmed",ex);
+                return View();
+            }
             
-            Dictionary dictionary = db.Dictionarys.Find(id);
-            dictionary.Status = "N";
-            db.Entry(dictionary).State = EntityState.Modified;
-            db.SaveChanges();
-            return RedirectToAction("Index");
-            //db.Dictionarys.Remove(dictionary);
-            //db.SaveChanges();
-            //return RedirectToAction("Index");
+            
         }
 
         [HttpAuthorize]

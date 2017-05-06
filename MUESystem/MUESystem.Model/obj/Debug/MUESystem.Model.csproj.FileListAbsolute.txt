@@ -16,3 +16,4 @@ E:\MichaelGit\MUE_System\MUESystem\MUESystem.Model\bin\Debug\EntityFramework.xml
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.Model\bin\Debug\EntityFramework.SqlServer.xml
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.Model\obj\Debug\MUESystem.Model.dll
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.Model\obj\Debug\MUESystem.Model.pdb
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.Model\obj\Debug\MUESystem.Model.csprojResolveAssemblyReference.cache

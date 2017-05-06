@@ -11,6 +11,7 @@ using MUESystem.Common.LogCommon;
 using MUESystem.Common.SessionCommon;
 using MUESystem.DAL;
 using MUESystem.Model;
+using MUESystem.Web.ModelsView;
 using MUESystem.Web.MUEAuthorize;
 using PagedList;
 
@@ -19,19 +20,29 @@ namespace MUESystem.Web.Controllers
     public class BillsController : BaseController
     {
         private MUEDbContext db = new MUEDbContext();
-        private int userID = SessionHelper.GetSeeionUserID();
 
         [HttpAuthorize]
         // GET: Bills
         public ActionResult Index(int page=1)
         {
-            try {
+            try
+            {
+                var query = from b in db.Bills.Where(x => x.CreatPersonID == userID && x.Status.Equals(statusY))
+                            join u in db.Users.Where(x=>x.ID==userID && x.Status.Equals(statusY))
+                            on b.CreatPersonID equals u.ID
+                            join d in db.Dictionarys.Where(x=>x.FirstCode.Equals("cost")&& x.Status.Equals(statusY))
+                            on b.BillTypeID equals d.ID
+                            orderby b.CreatTime descending
+                            select new BillIndexlList { ID = b.ID, CreateTime = b.CreatTime, UserName = u.DisplayName, BillType = d.InfoValue,money = b.BillMoney,remark=b.Reark };
+                var list = query.ToList<BillIndexlList>();
 
-                string status = EnumVal.GetStatusVal(Status.Y);
-                IPagedList<Bill> pagedList = db.Bills.Where(x => x.CreatPerson.ID == userID && x.Status.Equals(status)).OrderByDescending(x => x.CreatTime).ToPagedList(page, pageSize);
+                IPagedList<BillIndexlList> pagedList = list.ToPagedList(page, pageSize);
+
+                //将分页处理后的列表传给View  
                 return View(pagedList);
-            }catch(Exception ex){
-                Log.Error("BillsController-Index",ex);
+            }
+            catch (Exception ex) {
+                Log.Error("BillsController-index",ex);
             }
             //return View(db.Bills.ToList());
             return View();
@@ -57,7 +68,10 @@ namespace MUESystem.Web.Controllers
         // GET: Bills/Create
         public ActionResult Create()
         {
-            return View();
+            ViewBill viewBillCreat = new ViewBill();
+            viewBillCreat.bill = new Bill();
+
+            return View(viewBillCreat);
         }
 
         [HttpAuthorize]
@@ -66,25 +80,27 @@ namespace MUESystem.Web.Controllers
         // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,CreatTime,BillMoney,Status,Reark")] Bill bill)
+        public ActionResult Create(ViewBill viewBillCreat, string CreatTime)
         {
-            if (ModelState.IsValid)
+            try
             {
-                
-                bill.Status = EnumVal.GetStatusVal(Status.Y);
-                if (bill.CreatPerson.ID == null) {
-
+                if (ModelState.IsValid)
+                {
+                    viewBillCreat.bill.Status = statusY;
+                    viewBillCreat.bill.CreatPersonID = userID;
+                    viewBillCreat.bill.CreatTime = Convert.ToDateTime(CreatTime);
+                    string billTypeid = viewBillCreat.typeID;
+                    viewBillCreat.bill.BillTypeID =Convert.ToInt32(billTypeid);
+                    db.Bills.Add(viewBillCreat.bill);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
                 }
-                if (userID == null) { 
-                
-                }
-                bill.CreatPerson.ID = userID;
-                db.Bills.Add(bill);
-                db.SaveChanges();
-                return RedirectToAction("Index");
             }
-
-            return View(bill);
+            catch (Exception ex) {
+                Log.Error("BillsController-Create-Post",ex);
+                return View();
+            }
+            return View();
         }
 
         [HttpAuthorize]
@@ -109,7 +125,7 @@ namespace MUESystem.Web.Controllers
         // 详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,CreatTime,BillMoney,Status,Reark")] Bill bill)
+        public ActionResult Edit([Bind(Include = "ID,CreatPersonID,CreatTime,BillMoney,BillTypeID,Status,Reark")] Bill bill)
         {
             if (ModelState.IsValid)
             {

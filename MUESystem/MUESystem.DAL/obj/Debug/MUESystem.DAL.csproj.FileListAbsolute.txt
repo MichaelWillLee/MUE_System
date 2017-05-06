@@ -40,3 +40,5 @@ E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrati
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.dictionaystatus.resources
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.status.resources
 E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.bill1.resources
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.updatebillcreatetime.resources
+E:\MichaelGit\MUE_System\MUESystem\MUESystem.DAL\obj\Debug\MUESystem.DAL.Migrations.billcreatperson.resources

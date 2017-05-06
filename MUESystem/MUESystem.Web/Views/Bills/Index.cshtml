@@ -1,5 +1,6 @@
 ﻿@*@model IEnumerable<MUESystem.Model.Bill>*@
-@model PagedList.IPagedList<MUESystem.Model.Bill>
+
+@model PagedList.IPagedList<MUESystem.Web.ModelsView.BillIndexlList>
 @using PagedList.Mvc
 
 @{
@@ -14,42 +15,39 @@
 <table class="table">
     <tr>
         <th>
-            收入/支出
+            @*@Html.DisplayNameFor(model => model.CreatPersonID)*@用户
         </th>
         <th>
-           创建时间
+            @*@Html.DisplayNameFor(model => model.CreatTime)*@账单时间
         </th>
         <th>
-            金额
-        </th>
-        
-        <th>
-            类型
+            @*@Html.DisplayNameFor(model => model.BillMoney)*@金额
         </th>
         <th>
-            备注
+            @*@Html.DisplayNameFor(model => model.BillTypeID)*@消费类型
         </th>
         <th>
-            操作
+            @*@Html.DisplayNameFor(model => model.Reark)*@备注
         </th>
+        <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.BillType.FirstCode)
+            @Html.DisplayFor(modelItem => item.UserName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CreatTime)
+            @Html.DisplayFor(modelItem => item.CreateTime)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.BillMoney)
+            @Html.DisplayFor(modelItem => item.money)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.BillType.InfoValue)
+            @Html.DisplayFor(modelItem => item.BillType)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Reark)
+            @Html.DisplayFor(modelItem => item.remark)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |

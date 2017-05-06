@@ -1,13 +1,11 @@
-﻿@model MUESystem.Model.Bill
+﻿@model MUESystem.Web.ModelsView.ViewBill
 
-@{
-    ViewBag.Title = "Create";
-}
-
-<h2>Create</h2>
-<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
 <script src="~/Scripts/bootstrap.min.js"></script>
-<script src="~/My97DatePickerBeta/My97DatePicker/WdatePicker.js"></script>
+<script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+<script src="~/Scripts/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
@@ -16,35 +14,54 @@
         <h4>Bill</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        
         @*<div class="form-group">
-            @Html.LabelFor(model => model.CreatTime, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.bill.CreatTime, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.CreatTime, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CreatTime, "", new { @class = "text-danger" })
+                @Html.TextBoxFor(model => model.bill.CreatTime, new { @class = "form-control",@readonly = "readonly", @onfocus = "WdatePicker({skin:'whyGreen',dateFmt:'yyyy-MM-dd HH:mm:ss'})" ,@Value=""})
+                @Html.ValidationMessageFor(model => model.bill.CreatTime, "", new { @class = "text-danger" })
             </div>
         </div>*@
+
         <div class="form-group">
-            @Html.LabelFor(model => model.CreatTime, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.bill.CreatTime, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-              
-               @Html.TextBox("CreatTime", "", new { @Class = "form-control", @onfocus = "WdatePicker()" })
-               @Html.ValidationMessageFor(model => model.CreatTime, "", new { @class = "text-danger" })
+                <input size="16" type="text" id="CreatTime" name="CreatTime" value="" readonly class="form-control">
+
+                <script type="text/javascript">
+                    $("#CreatTime").datetimepicker({
+                        format: 'yyyy-mm-dd hh:ii:ss',
+                        autoclose: true,
+                        todayBtn: true,
+                        pickerPosition: "bottom-left"
+                    });
+                </script>
+            </div>
+         </div>
+       
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.bill.BillMoney, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.bill.BillMoney, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.bill.BillMoney, "", new { @class = "text-danger" })
             </div>
         </div>
-        
+
+        @*消费类型*@
         <div class="form-group">
-            @Html.LabelFor(model => model.BillMoney, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("消费类型", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.BillMoney, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.BillMoney, "", new { @class = "text-danger" })
+                @*@Html.DropDownList("typelist","" )*@
+                @Html.DropDownListFor(model=>model.typeID,Model.GetSelectList(),"--请选择--")
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Reark, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.bill.Reark, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Reark, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Reark, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.bill.Reark, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.bill.Reark, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -59,7 +76,3 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}

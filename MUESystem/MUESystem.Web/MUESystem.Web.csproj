@@ -142,11 +142,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="ModelsView\ViewBill.cs" />
     <Compile Include="ModelsView\ViewLogin.cs" />
     <Compile Include="MUEAuthorize\HttpAuthorizeAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\PagedList.css" />
@@ -167,6 +169,7 @@
     <Content Include="My97DatePickerBeta\My97DatePicker\skin\whyGreen\datepicker.css" />
     <Content Include="My97DatePickerBeta\My97DatePicker\skin\whyGreen\img.gif" />
     <Content Include="My97DatePickerBeta\My97DatePicker\WdatePicker.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Log4Net.config">
@@ -181,6 +184,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datetimepicker.zh-CN.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -212,11 +216,11 @@
     <Content Include="Views\Dictionaries\Details.cshtml" />
     <Content Include="Views\Dictionaries\Edit.cshtml" />
     <Content Include="Views\Dictionaries\Index.cshtml" />
-    <Content Include="Views\Bills\Create.cshtml" />
     <Content Include="Views\Bills\Delete.cshtml" />
     <Content Include="Views\Bills\Details.cshtml" />
     <Content Include="Views\Bills\Edit.cshtml" />
     <Content Include="Views\Bills\Index.cshtml" />
+    <Content Include="Views\Bills\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
